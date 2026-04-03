@@ -1,5 +1,8 @@
+'use client';
+
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import posthog from "posthog-js";
 
 export default function Portfolio() {
   return (
@@ -29,8 +32,17 @@ export default function Portfolio() {
           </p>
 
           <div className="flex items-center gap-4 mt-2">
-            <Button className="h-10 px-6 font-medium">View GitHub</Button>
-            <Button variant="secondary" className="h-10 px-6 font-medium">
+            <Button
+              className="h-10 px-6 font-medium"
+              onClick={() => posthog.capture("github_button_clicked", { location: "hero" })}
+            >
+              View GitHub
+            </Button>
+            <Button
+              variant="secondary"
+              className="h-10 px-6 font-medium"
+              onClick={() => posthog.capture("resume_download_clicked", { location: "hero" })}
+            >
               Download Resume
             </Button>
           </div>
@@ -228,6 +240,7 @@ export default function Portfolio() {
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-foreground transition-colors"
+              onClick={() => posthog.capture("github_footer_link_clicked", { location: "footer" })}
             >
               GitHub
             </a>
@@ -236,12 +249,14 @@ export default function Portfolio() {
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-foreground transition-colors"
+              onClick={() => posthog.capture("linkedin_link_clicked", { location: "footer" })}
             >
               LinkedIn
             </a>
             <a
               href="mailto:royabirdhn@gmail.com"
               className="hover:text-foreground transition-colors"
+              onClick={() => posthog.capture("email_link_clicked", { location: "footer" })}
             >
               Email
             </a>
