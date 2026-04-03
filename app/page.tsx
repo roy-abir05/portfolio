@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -34,14 +34,18 @@ export default function Portfolio() {
           <div className="flex items-center gap-4 mt-2">
             <Button
               className="h-10 px-6 font-medium"
-              onClick={() => posthog.capture("github_button_clicked", { location: "hero" })}
+              onClick={() =>
+                posthog.capture("github_button_clicked", { location: "hero" })
+              }
             >
               View GitHub
             </Button>
             <Button
               variant="secondary"
               className="h-10 px-6 font-medium"
-              onClick={() => posthog.capture("resume_download_clicked", { location: "hero" })}
+              onClick={() =>
+                posthog.capture("resume_download_clicked", { location: "hero" })
+              }
             >
               Download Resume
             </Button>
@@ -56,9 +60,11 @@ export default function Portfolio() {
             Open Source Engineering
           </h3>
 
-          <div className="flex flex-col gap-12">
+          {/* 1. Added 'group/list' to the parent container */}
+          <div className="flex flex-col gap-12 group/list">
             {/* CERN-HSF (HPX) */}
-            <div className="flex flex-col gap-4 group">
+            {/* 2. Added the transition and hover state classes to the child */}
+            <div className="flex flex-col gap-4 group transition-all duration-300 hover:!opacity-100 group-hover/list:opacity-40">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <div className="flex flex-col">
                   <h4 className="text-lg font-medium text-foreground">
@@ -92,7 +98,8 @@ export default function Portfolio() {
             </div>
 
             {/* Cal.com */}
-            <div className="flex flex-col gap-4 group">
+            {/* 2. Added the same transition and hover state classes to this child */}
+            <div className="flex flex-col gap-4 group transition-all duration-300 hover:!opacity-100 group-hover/list:opacity-40">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <div className="flex flex-col">
                   <h4 className="text-lg font-medium text-foreground">
@@ -240,7 +247,11 @@ export default function Portfolio() {
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-foreground transition-colors"
-              onClick={() => posthog.capture("github_footer_link_clicked", { location: "footer" })}
+              onClick={() =>
+                posthog.capture("github_footer_link_clicked", {
+                  location: "footer",
+                })
+              }
             >
               GitHub
             </a>
@@ -249,14 +260,18 @@ export default function Portfolio() {
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-foreground transition-colors"
-              onClick={() => posthog.capture("linkedin_link_clicked", { location: "footer" })}
+              onClick={() =>
+                posthog.capture("linkedin_link_clicked", { location: "footer" })
+              }
             >
               LinkedIn
             </a>
             <a
               href="mailto:royabirdhn@gmail.com"
               className="hover:text-foreground transition-colors"
-              onClick={() => posthog.capture("email_link_clicked", { location: "footer" })}
+              onClick={() =>
+                posthog.capture("email_link_clicked", { location: "footer" })
+              }
             >
               Email
             </a>
