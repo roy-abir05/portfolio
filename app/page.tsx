@@ -32,14 +32,14 @@ export default function Portfolio() {
           </p>
 
           <div className="flex items-center gap-4 mt-2">
-            <Button
+            {/* <Button
               className="h-10 px-6 font-medium"
               onClick={() =>
                 posthog.capture("github_button_clicked", { location: "hero" })
               }
             >
               View GitHub
-            </Button>
+            </Button> */}
             <Button
               variant="secondary"
               className="h-10 px-6 font-medium"
@@ -243,7 +243,7 @@ export default function Portfolio() {
           <p>© {new Date().getFullYear()} Abir Roy. All rights reserved.</p>
           <div className="flex items-center gap-6 font-medium">
             <a
-              href="https://github.com/PythonHacker24"
+              href="https://github.com/roy-abir05"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-foreground transition-colors"
@@ -256,7 +256,7 @@ export default function Portfolio() {
               GitHub
             </a>
             <a
-              href="https://linkedin.com/in/your-linkedin"
+              href="https://linkedin.com/in/roy-abir05"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-foreground transition-colors"
