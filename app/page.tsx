@@ -64,7 +64,7 @@ export default function Portfolio() {
           <div className="flex flex-col gap-12 group/list">
             {/* CERN-HSF (HPX) */}
             {/* 2. Added the transition and hover state classes to the child */}
-            <div className="flex flex-col gap-4 group transition-all duration-300 hover:!opacity-100 group-hover/list:opacity-40">
+            <div className="flex flex-col gap-4 group transition-all duration-300 hover:!opacity-100 group-hover/list:opacity-25">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <div className="flex flex-col">
                   <h4 className="text-lg font-medium text-foreground">
@@ -99,7 +99,7 @@ export default function Portfolio() {
 
             {/* Cal.com */}
             {/* 2. Added the same transition and hover state classes to this child */}
-            <div className="flex flex-col gap-4 group transition-all duration-300 hover:!opacity-100 group-hover/list:opacity-40">
+            <div className="flex flex-col gap-4 group transition-all duration-300 hover:!opacity-100 group-hover/list:opacity-25">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <div className="flex flex-col">
                   <h4 className="text-lg font-medium text-foreground">
