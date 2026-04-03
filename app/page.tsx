@@ -38,6 +38,88 @@ export default function Portfolio() {
 
         {/* Placeholder for the next section */}
         <div className="h-px w-full bg-border" />
+
+        {/* OPEN SOURCE ENGINEERING */}
+        <section className="flex flex-col gap-8 animate-in fade-in slide-in-from-bottom-4 duration-700 ease-in-out delay-150 fill-mode-both">
+          <h3 className="text-2xl font-semibold tracking-tight text-foreground">
+            Open Source Engineering
+          </h3>
+
+          <div className="flex flex-col gap-12">
+            {/* CERN-HSF (HPX) */}
+            <div className="flex flex-col gap-4 group">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <div className="flex flex-col">
+                  <h4 className="text-lg font-medium text-foreground">
+                    CERN-HSF (HPX)
+                  </h4>
+                  <span className="text-sm text-muted-foreground">
+                    C++ Core Contributor
+                  </span>
+                </div>
+                <Badge
+                  variant="secondary"
+                  className="w-fit transition-colors group-hover:bg-primary group-hover:text-primary-foreground"
+                >
+                  C++ • Parallelism
+                </Badge>
+              </div>
+              <ul className="list-disc list-outside ml-4 space-y-2 text-sm sm:text-base text-muted-foreground leading-relaxed">
+                <li>
+                  Successfully merged architectural improvements into HPX, the
+                  C++ Standard Library for Concurrency and Parallelism.
+                </li>
+                <li>
+                  Navigated a highly complex, globally distributed codebase to
+                  optimize parallel execution components.
+                </li>
+                <li>
+                  Demonstrated the ability to write robust, low-level C++ for
+                  high-performance computing environments.
+                </li>
+              </ul>
+            </div>
+
+            {/* Cal.com */}
+            <div className="flex flex-col gap-4 group">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <div className="flex flex-col">
+                  <h4 className="text-lg font-medium text-foreground">
+                    Cal.com
+                  </h4>
+                  <span className="text-sm text-muted-foreground">
+                    Production Contributor
+                  </span>
+                </div>
+                <Badge
+                  variant="secondary"
+                  className="w-fit transition-colors group-hover:bg-primary group-hover:text-primary-foreground"
+                >
+                  Next.js • TypeScript
+                </Badge>
+              </div>
+              <ul className="list-disc list-outside ml-4 space-y-2 text-sm sm:text-base text-muted-foreground leading-relaxed">
+                <li>
+                  Shipped production-ready features and bug fixes for a modular
+                  scheduling platform used by thousands of teams.
+                </li>
+                <li>
+                  Collaborated asynchronously with core maintainers to ensure
+                  strict backward compatibility, comprehensive test coverage,
+                  and adherence to rigorous review standards.
+                </li>
+                <li>
+                  Engineered solutions for complex routing forms, URI encoding
+                  preservation, and configurable Meta standard conversion
+                  events.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Next divider */}
+        <div className="h-px w-full bg-border" />
       </div>
     </main>
   );
