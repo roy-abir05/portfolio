@@ -186,8 +186,8 @@ export default function Portfolio() {
                   Medalist.
                 </li>
                 <li>
-                  Regionalist at the IICPC CodeFest 2025, demonstrating the ability
-                  to write highly optimized logic under extreme time
+                  Regionalist at the IICPC CodeFest 2025, demonstrating the
+                  ability to write highly optimized logic under extreme time
                   constraints.
                 </li>
                 <li>
@@ -199,8 +199,54 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* Final divider before footer */}
         <div className="h-px w-full bg-border mt-8" />
+
+        {/* DEVELOPER ENVIRONMENT */}
+        <section className="flex flex-col gap-6 animate-in fade-in slide-in-from-bottom-4 duration-700 ease-in-out delay-500 fill-mode-both">
+          <h3 className="text-2xl font-semibold tracking-tight text-foreground">
+            Developer Environment
+          </h3>
+          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+            I believe an engineer should understand their tools from the kernel
+            up. I daily-drive{" "}
+            <strong className="text-foreground font-medium">Arch Linux</strong>{" "}
+            and utilize{" "}
+            <strong className="text-foreground font-medium">Hyprland</strong> as
+            my window manager. Building, configuring, and maintaining my own
+            custom desktop environment has given me a deep appreciation for
+            Linux system architecture, shell scripting, and uncompromising
+            performance.
+          </p>
+        </section>
+
+        {/* FOOTER & CONTACT */}
+        <footer className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-16 pb-12 text-sm text-muted-foreground animate-in fade-in duration-700 ease-in-out delay-700 fill-mode-both">
+          <p>© {new Date().getFullYear()} Abir Roy. All rights reserved.</p>
+          <div className="flex items-center gap-6 font-medium">
+            <a
+              href="https://github.com/PythonHacker24"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-foreground transition-colors"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://linkedin.com/in/your-linkedin"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-foreground transition-colors"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="mailto:royabirdhn@gmail.com"
+              className="hover:text-foreground transition-colors"
+            >
+              Email
+            </a>
+          </div>
+        </footer>
       </div>
     </main>
   );
