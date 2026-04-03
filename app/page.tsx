@@ -36,7 +36,6 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* Placeholder for the next section */}
         <div className="h-px w-full bg-border" />
 
         {/* OPEN SOURCE ENGINEERING */}
@@ -120,6 +119,88 @@ export default function Portfolio() {
 
         {/* Next divider */}
         <div className="h-px w-full bg-border" />
+
+        {/* SYSTEMS & ALGORITHMS */}
+        <section className="flex flex-col gap-8 animate-in fade-in slide-in-from-bottom-4 duration-700 ease-in-out delay-300 fill-mode-both">
+          <h3 className="text-2xl font-semibold tracking-tight text-foreground">
+            Systems & Algorithms
+          </h3>
+
+          <div className="flex flex-col gap-12">
+            {/* AtomicQueue & Micromatch */}
+            <div className="flex flex-col gap-4 group">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <div className="flex flex-col">
+                  <h4 className="text-lg font-medium text-foreground">
+                    AtomicQueue & Micromatch
+                  </h4>
+                  <span className="text-sm text-muted-foreground">
+                    Low-Latency C++ Engineering
+                  </span>
+                </div>
+                <Badge
+                  variant="secondary"
+                  className="w-fit transition-colors group-hover:bg-primary group-hover:text-primary-foreground"
+                >
+                  C++ • CMake
+                </Badge>
+              </div>
+              <ul className="list-disc list-outside ml-4 space-y-2 text-sm sm:text-base text-muted-foreground leading-relaxed">
+                <li>
+                  Designed and implemented a lock-free ring buffer and Limit
+                  Order Book engine tailored for high-frequency trading
+                  environments.
+                </li>
+                <li>
+                  Engineered custom memory management and synchronization
+                  primitives to eliminate thread blocking and reduce latency.
+                </li>
+                <li>
+                  Focused heavily on cache-line optimization and mechanical
+                  sympathy to maximize algorithmic throughput.
+                </li>
+              </ul>
+            </div>
+
+            {/* Competitive Programming */}
+            <div className="flex flex-col gap-4 group">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <div className="flex flex-col">
+                  <h4 className="text-lg font-medium text-foreground">
+                    Algorithmic Problem Solving
+                  </h4>
+                  <span className="text-sm text-muted-foreground">
+                    Competitive Programming
+                  </span>
+                </div>
+                <Badge
+                  variant="secondary"
+                  className="w-fit transition-colors group-hover:bg-primary group-hover:text-primary-foreground"
+                >
+                  C++ • Data Structures
+                </Badge>
+              </div>
+              <ul className="list-disc list-outside ml-4 space-y-2 text-sm sm:text-base text-muted-foreground leading-relaxed">
+                <li>
+                  Indian National Olympiad in Informatics (INOI) Bronze
+                  Medalist.
+                </li>
+                <li>
+                  Regionalist at the IICPC CodeFest 2025, demonstrating the ability
+                  to write highly optimized logic under extreme time
+                  constraints.
+                </li>
+                <li>
+                  Consistently leverage advanced data structures and algorithms
+                  to solve complex mathematical and computational problems.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Final divider before footer */}
+        <div className="h-px w-full bg-border mt-8" />
       </div>
     </main>
   );
