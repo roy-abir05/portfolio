@@ -7,11 +7,11 @@ export default function Portfolio() {
       <div className="max-w-3xl mx-auto px-6 py-24 flex flex-col gap-20">
         {/* HERO SECTION */}
         <section className="flex flex-col gap-6 animate-in fade-in slide-in-from-bottom-4 duration-700 ease-in-out">
-          <div className="flex flex-col gap-2">
-            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground">
+          <div className="flex flex-col gap-2 items-center">
+            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground text-center">
               Abir Roy
             </h1>
-            <h2 className="text-xl font-medium text-muted-foreground flex items-center gap-2">
+            <h2 className="text-xl font-medium text-muted-foreground flex items-center gap-2 text-center">
               Systems & Software Engineer
             </h2>
           </div>
