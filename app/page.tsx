@@ -7,6 +7,7 @@ import Link from "next/link";
 import { GithubActivity } from "@/components/github-activity";
 import { NowStatus } from "@/components/now-status";
 import DeveloperEnvironment from "@/components/developer-environment";
+import Image from "next/image";
 
 export default function Portfolio() {
   return (
@@ -14,6 +15,19 @@ export default function Portfolio() {
       <div className="max-w-3xl mx-auto px-6 py-24 flex flex-col gap-20">
         {/* HERO SECTION */}
         <section className="flex flex-col gap-6 animate-in fade-in slide-in-from-bottom-4 duration-700 ease-in-out">
+          {/* Image  */}
+          <div className="mx-auto bg-transparent">
+            <Image
+              src="/me.png"
+              alt="Abir Roy"
+              priority
+              className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
+              width={220}
+              height={220}
+              quality={100}
+            />
+          </div>
+
           <div className="flex flex-col gap-2 items-center">
             <h1 className="text-4xl sm:text-7xl font-medium tracking-tight text-foreground text-center">
               Abir Roy
