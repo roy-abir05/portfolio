@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { CommandMenu } from "@/components/command-menu";
 import { ArchTerminal } from "@/components/easter-eggs/arch-terminal";
+import { SocialsDock } from "@/components/socials-dock";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -45,6 +46,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         {children}
+        <SocialsDock />
         <CommandMenu />
         <ArchTerminal />
       </body>
