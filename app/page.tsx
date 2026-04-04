@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import posthog from "posthog-js";
+import Link from "next/link";
 
 export default function Portfolio() {
   return (
@@ -32,23 +33,35 @@ export default function Portfolio() {
           </p>
 
           <div className="flex items-center gap-4 mt-2">
-            {/* <Button
-              className="h-10 px-6 font-medium"
-              onClick={() =>
-                posthog.capture("github_button_clicked", { location: "hero" })
+            <Link href="https://github.com/roy-abir05" target="_blank">
+              <Button
+                className="h-10 px-6 font-medium"
+                onClick={() =>
+                  posthog.capture("github_button_clicked", { location: "hero" })
+                }
+              >
+                GitHub
+              </Button>
+            </Link>
+            <Link
+              href={
+                process.env.NEXT_PUBLIC_RESUME_URL ||
+                "https://drive.google.com/file/d/1NGzczTl1p25wr2c0wMfTFtueV72GXUhk/view?usp=sharing"
               }
+              target="_blank"
             >
-              View GitHub
-            </Button> */}
-            <Button
-              variant="secondary"
-              className="h-10 px-6 font-medium"
-              onClick={() =>
-                posthog.capture("resume_download_clicked", { location: "hero" })
-              }
-            >
-              Download Resume
-            </Button>
+              <Button
+                variant="secondary"
+                className="h-10 px-6 font-medium"
+                onClick={() =>
+                  posthog.capture("resume_download_clicked", {
+                    location: "hero",
+                  })
+                }
+              >
+                Resume
+              </Button>
+            </Link>
           </div>
         </section>
 
