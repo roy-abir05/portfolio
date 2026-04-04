@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { CommandMenu } from "@/components/command-menu";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -27,6 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
+      suppressHydrationWarning
       lang="en"
       className={cn(
         "h-full",
@@ -37,7 +39,10 @@ export default function RootLayout({
         "dark",
       )}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+        <CommandMenu />
+      </body>
     </html>
   );
 }

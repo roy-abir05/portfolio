@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import posthog from "posthog-js";
 import Link from "next/link";
+import { GithubActivity } from "@/components/github-activity";
 
 export default function Portfolio() {
   return (
@@ -147,6 +148,11 @@ export default function Portfolio() {
             </div>
           </div>
         </section>
+
+        {/* GitHub Heatmap */}
+        <div className="flex flex-col gap-4 transition-all duration-300 hover:!opacity-100 group-hover/list:opacity-25">
+          <GithubActivity />
+        </div>
 
         {/* Next divider */}
         <div className="h-px w-full bg-border" />
