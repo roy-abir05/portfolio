@@ -6,6 +6,7 @@ import posthog from "posthog-js";
 import Link from "next/link";
 import { GithubActivity } from "@/components/github-activity";
 import { NowStatus } from "@/components/now-status";
+import DeveloperEnvironment from "@/components/developer-environment";
 
 export default function Portfolio() {
   return (
@@ -244,22 +245,7 @@ export default function Portfolio() {
         <div className="h-px w-full bg-border mt-8" />
 
         {/* DEVELOPER ENVIRONMENT */}
-        <section className="flex flex-col gap-6 animate-in fade-in slide-in-from-bottom-4 duration-700 ease-in-out delay-500 fill-mode-both">
-          <h3 className="text-2xl font-semibold tracking-tight text-foreground">
-            Developer Environment
-          </h3>
-          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-            I believe an engineer should understand their tools from the kernel
-            up. I daily-drive{" "}
-            <strong className="text-foreground font-medium">Arch Linux</strong>{" "}
-            and utilize{" "}
-            <strong className="text-foreground font-medium">Hyprland</strong> as
-            my window manager. Building, configuring, and maintaining my own
-            custom desktop environment has given me a deep appreciation for
-            Linux system architecture, shell scripting, and uncompromising
-            performance.
-          </p>
-        </section>
+        <DeveloperEnvironment />
 
         {/* FOOTER & CONTACT */}
         <footer className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-16 pb-12 text-sm text-muted-foreground animate-in fade-in duration-700 ease-in-out delay-700 fill-mode-both">
