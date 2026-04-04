@@ -12,24 +12,23 @@ export default function Portfolio() {
         {/* HERO SECTION */}
         <section className="flex flex-col gap-6 animate-in fade-in slide-in-from-bottom-4 duration-700 ease-in-out">
           <div className="flex flex-col gap-2 items-center">
-            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground text-center">
+            <h1 className="text-4xl sm:text-7xl font-medium tracking-tight text-foreground text-center">
               Abir Roy
             </h1>
-            <h2 className="text-xl font-medium text-muted-foreground flex items-center gap-2 text-center">
+            <h2 className="text-xl font-normal text-muted-foreground flex items-center gap-2 text-center">
               Systems & Software Engineer
             </h2>
           </div>
 
           <p className="max-w-2xl text-base sm:text-lg text-muted-foreground leading-relaxed">
-            A Chemical Engineering undergrad who spends his time building
-            high-performance C++ systems, optimizing low-latency architectures,
-            and shipping production features to large-scale open-source
-            platforms.
+            I build high-performance systems where efficiency isn&apos;t an
+            afterthought—it&apos;s the foundation. From low-latency C++
+            architectures to scalable backend systems, I focus on writing code
+            that holds up under real-world pressure.
             <br className="hidden sm:block" />
-            <br className="hidden sm:block" />I bridge the gap between
-            algorithmic rigor and real-world system design, whether that means
-            crafting lock-free data structures or writing resilient backend
-            services.
+            <br className="hidden sm:block" />I am driven by the intersection of
+            algorithmic rigor and system design—crafting solutions that are not
+            just correct, but fast, resilient, and built to scale.
           </p>
 
           <div className="flex items-center gap-4 mt-2">
