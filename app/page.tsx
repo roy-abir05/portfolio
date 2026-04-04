@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import posthog from "posthog-js";
 import Link from "next/link";
 import { GithubActivity } from "@/components/github-activity";
+import { NowStatus } from "@/components/now-status";
 
 export default function Portfolio() {
   return (
@@ -62,6 +63,10 @@ export default function Portfolio() {
                 Resume
               </Button>
             </Link>
+          </div>
+
+          <div className="pt-2">
+            <NowStatus />
           </div>
         </section>
 
