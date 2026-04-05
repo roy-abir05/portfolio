@@ -261,43 +261,16 @@ export default function Portfolio() {
         {/* DEVELOPER ENVIRONMENT */}
         <DeveloperEnvironment />
 
-        {/* FOOTER & CONTACT */}
-        <footer className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-16 pb-12 text-sm text-muted-foreground animate-in fade-in duration-700 ease-in-out delay-700 fill-mode-both">
-          <p>© {new Date().getFullYear()} Abir Roy. All rights reserved.</p>
-          <div className="flex items-center gap-6 font-medium">
-            <a
-              href="https://github.com/roy-abir05"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-foreground transition-colors"
-              onClick={() =>
-                posthog.capture("github_footer_link_clicked", {
-                  location: "footer",
-                })
-              }
-            >
-              GitHub
-            </a>
-            <a
-              href="https://linkedin.com/in/roy-abir05"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-foreground transition-colors"
-              onClick={() =>
-                posthog.capture("linkedin_link_clicked", { location: "footer" })
-              }
-            >
-              LinkedIn
-            </a>
-            <a
-              href="mailto:royabirdhn@gmail.com"
-              className="hover:text-foreground transition-colors"
-              onClick={() =>
-                posthog.capture("email_link_clicked", { location: "footer" })
-              }
-            >
-              Email
-            </a>
+        {/* FOOTER & EASTER EGG HINT */}
+        <footer className="mt-16 pb-28 sm:pb-12 flex flex-col sm:flex-row items-center justify-between text-xs sm:text-sm text-muted-foreground border-t border-[#222] pt-8 animate-in fade-in duration-700 ease-in-out delay-700 fill-mode-both">
+          <p>© {new Date().getFullYear()} Abir Roy. All systems operational.</p>
+
+          <div className="hidden sm:flex items-center gap-2 font-mono text-xs">
+            <span>[ type</span>
+            <kbd className="px-1.5 py-0.5 bg-[#111] border border-[#333] rounded-md text-foreground font-sans text-[10px] uppercase tracking-wider shadow-sm">
+              sudo
+            </kbd>
+            <span>anywhere ]</span>
           </div>
         </footer>
       </div>
