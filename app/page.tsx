@@ -12,7 +12,7 @@ import Image from "next/image";
 export default function Portfolio() {
   return (
     <main className="min-h-screen bg-background text-foreground selection:bg-primary selection:text-primary-foreground">
-      <div className="max-w-3xl mx-auto px-6 py-24 flex flex-col gap-20">
+      <div className="max-w-3xl mx-auto px-6 py-20 flex flex-col gap-20">
         {/* HERO SECTION */}
         <section className="flex flex-col gap-6 animate-in fade-in slide-in-from-bottom-4 duration-700 ease-in-out">
           {/* Image  */}
@@ -37,15 +37,23 @@ export default function Portfolio() {
             </h2>
           </div>
 
-          <p className="max-w-2xl text-base sm:text-lg text-muted-foreground leading-relaxed">
+          <p className="max-w-2xl text-base sm:text-xl text-muted-foreground leading-relaxed">
             I build high-performance systems where efficiency isn&apos;t an
-            afterthought—it&apos;s the foundation. From low-latency C++
-            architectures to scalable backend systems, I focus on writing code
-            that holds up under real-world pressure.
-            <br className="hidden sm:block" />
-            <br className="hidden sm:block" />I am driven by the intersection of
-            algorithmic rigor and system design—crafting solutions that are not
-            just correct, but fast, resilient, and built to scale.
+            afterthought—it&apos;s the foundation. From low-latency{" "}
+            <span className="underline text-foreground">C++ architectures</span>{" "}
+            and lock-free data structures to scalable{" "}
+            <span className="underline text-foreground">
+              full-stack web application
+            </span>
+            , I focus on writing code that holds up under real-world pressure.
+            <br /> <br />
+            My foundation is built on the algorithmic rigor of{" "}
+            <span className="underline text-foreground">
+              competitive programming
+            </span>
+            , which drives my approach to system design: crafting solutions that
+            are not just correct, but mathematically fast, resilient, and built
+            to scale
           </p>
 
           <div className="flex items-center gap-4 mt-2">
