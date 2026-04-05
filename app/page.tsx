@@ -8,6 +8,7 @@ import { GithubActivity } from "@/components/github-activity";
 import { NowStatus } from "@/components/now-status";
 import DeveloperEnvironment from "@/components/developer-environment";
 import Image from "next/image";
+import { ExternalLink } from "lucide-react";
 
 export default function Portfolio() {
   return (
@@ -90,6 +91,160 @@ export default function Portfolio() {
 
           <div className="pt-2">
             <NowStatus />
+          </div>
+        </section>
+
+        <div className="h-px w-full bg-border" />
+
+        {/* ALGORITHMIC FOUNDATION (CP SECTION) */}
+        <section className="flex flex-col gap-8 animate-in fade-in slide-in-from-bottom-4 duration-700 ease-in-out delay-700 fill-mode-both mt-16">
+          {/* Header */}
+          <div className="flex flex-col gap-4">
+            <h3 className="text-2xl font-semibold tracking-tight text-foreground">
+              Algorithmic Foundation
+            </h3>
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-2xl">
+              Algorithms dictate system limits. My competitive programming
+              background drives how I approach low-latency design, memory
+              alignment, and concurrency in production.
+            </p>
+          </div>
+
+          {/* The AST / Staircase Directory UI */}
+          <div className="relative font-mono text-sm sm:text-base mt-2">
+            {/* Main Vertical Trunk */}
+            <div className="absolute left-1.5 top-2 bottom-6 w-px bg-[#333]" />
+
+            {/* NODE 1: Global & National Tier */}
+            {/* Base indent: ml-8, Desktop indent: ml-12 */}
+            <div className="relative mb-10 ml-8 sm:ml-12 group">
+              {/* Connector Line */}
+              <div className="absolute top-7 -left-[26px] sm:-left-[42px] w-[26px] sm:w-[42px] h-px bg-[#333] transition-colors group-hover:bg-[#555]" />
+              {/* Trunk Dot */}
+              <div className="absolute top-[25px] -left-[30px] sm:-left-[46px] w-2.5 h-2.5 rounded-full bg-foreground outline outline-4 outline-background" />
+
+              <div className="border border-[#222] bg-[#0a0a0a] rounded-lg p-5 transition-colors hover:border-[#444]">
+                <h4 className="text-foreground font-semibold font-sans text-lg mb-4 flex items-center gap-2">
+                  <span className="text-muted-foreground font-mono text-sm tracking-wider">
+                    /global-tier
+                  </span>
+                </h4>
+                <ul className="flex flex-col gap-3 font-sans text-muted-foreground">
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#555] mt-0.5">├─</span>
+                    <span>
+                      <strong className="text-foreground font-medium">
+                        INOI 2023 Bronze Medalist:
+                      </strong>{" "}
+                      Secured rank among <span className="italic">top 64</span>{" "}
+                      nationally in the Indian National Olympiad in Informatics.
+                      Qualified via{" "}
+                      <span className="italic">
+                        ZIO (Zonal Informatics Olympiad)
+                      </span>
+                      , demonstrating aptitude in discrete mathematics and
+                      logical reasoning
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#555] mt-0.5">└─</span>
+                    <span>
+                      <strong className="text-foreground font-medium">
+                        Meta Hacker Cup (2021-2025):
+                      </strong>{" "}
+                      5x Qualifier. Ranked Top 2000 globally in 2025
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* NODE 2: The Crucible / HFT Arenas */}
+            {/* Base indent: ml-12, Desktop indent: ml-24 */}
+            <div className="relative mb-10 ml-12 sm:ml-24 group">
+              {/* Connector Line */}
+              <div className="absolute top-7 -left-[42px] sm:-left-[90px] w-[42px] sm:w-[90px] h-px bg-[#333] transition-colors group-hover:bg-[#555]" />
+              {/* Trunk Dot */}
+              <div className="absolute top-[25px] -left-[46px] sm:-left-[94px] w-2.5 h-2.5 rounded-full bg-foreground outline outline-4 outline-background" />
+
+              <div className="border border-[#222] bg-[#0a0a0a] rounded-lg p-5 transition-colors hover:border-[#444]">
+                <h4 className="text-foreground font-semibold font-sans text-lg mb-4 flex items-center gap-2">
+                  <span className="text-muted-foreground font-mono text-sm tracking-wider">
+                    /high-frequency-arenas
+                  </span>
+                </h4>
+                <ul className="flex flex-col gap-3 font-sans text-muted-foreground">
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#555] mt-0.5">└─</span>
+                    <span>
+                      <strong className="text-foreground font-medium">
+                        IICPC Codefest 2025 Regionals (Rank 201):
+                      </strong>{" "}
+                      Competed in high-stakes arenas backed by Jane Street and
+                      Citadel, focusing on extreme optimization and edge-case
+                      resolution
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* NODE 3: Baseline & Leadership */}
+            {/* Base indent: ml-16, Desktop indent: ml-36 */}
+            <div className="relative ml-16 sm:ml-36 group">
+              {/* Connector Line */}
+              <div className="absolute top-7 -left-[58px] sm:-left-[138px] w-[58px] sm:w-[138px] h-px bg-[#333] transition-colors group-hover:bg-[#555]" />
+              {/* Trunk Dot */}
+              <div className="absolute top-[25px] -left-[62px] sm:-left-[142px] w-2.5 h-2.5 rounded-full bg-foreground outline outline-4 outline-background shadow-[0_0_10px_rgba(255,255,255,0.3)]" />
+
+              <div className="border border-[#222] bg-[#0a0a0a] rounded-lg p-5 transition-colors hover:border-[#444]">
+                <h4 className="text-foreground font-semibold font-sans text-lg mb-4 flex items-center gap-2">
+                  <span className="text-muted-foreground font-mono text-sm tracking-wider">
+                    /metrics-and-leadership
+                  </span>
+                </h4>
+                <ul className="flex flex-col gap-3 font-sans text-muted-foreground">
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#555] mt-0.5">├─</span>
+                    <span>
+                      <strong className="text-foreground font-medium">
+                        Verified Ratings:
+                      </strong>{" "}
+                      <div>
+                        <Link
+                          href="https://codeforces.com/profile/roy_abir05"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-1.5 hover:text-foreground/80"
+                        >
+                          Codeforces Specialist (Max 1556)
+                          <ExternalLink className="h-3.5 w-3.5" />
+                        </Link>
+                        <Link
+                          href="https://www.codechef.com/users/roy_abir05"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-1.5 hover:text-foreground/80"
+                        >
+                          CodeChef 4-Star (Max 1924)
+                          <ExternalLink className="h-3.5 w-3.5" />
+                        </Link>
+                      </div>
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#555] mt-0.5">└─</span>
+                    <span>
+                      <strong className="text-foreground font-medium">
+                        Architected Codecracker 2025:
+                      </strong>{" "}
+                      Managed infrastructure, designed edge-case test suites,
+                      and led community engagement for 150+ participants
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </section>
 
