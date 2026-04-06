@@ -16,7 +16,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
-import { FileText, Mail, Terminal } from "lucide-react";
+import { FileText, Mail } from "lucide-react";
 
 export function CommandMenu() {
   const [open, setOpen] = React.useState(false);
@@ -40,10 +40,10 @@ export function CommandMenu() {
 
   return (
     <>
-      <p className="fixed bottom-4 right-4 text-sm text-muted-foreground hidden md:flex items-center gap-1 opacity-50 hover:opacity-100 transition-opacity">
+      <p className="fixed bottom-4 right-4 text-sm text-muted-foreground hidden md:flex items-center gap-1 group hover:text-foreground transition-color">
         Press{" "}
-        <kbd className="pointer-events-none inline-flex h-5 items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
-          <span className="text-xs">⌘</span>K
+        <kbd className="pointer-events-none inline-flex h-5 items-center gap-1 rounded border bg-muted px-1.5 font-mono text-sm font-medium text-muted-foreground group-hover:text-foreground">
+          <span className="text-xs">Ctrl / Cmd&nbsp;</span>+ K
         </kbd>
       </p>
 
