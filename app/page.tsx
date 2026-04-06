@@ -1,7 +1,6 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import posthog from "posthog-js";
 import Link from "next/link";
 import { GithubActivity } from "@/components/github-activity";
@@ -14,6 +13,7 @@ import {
   GitMerge,
   GitPullRequestClosed,
 } from "lucide-react";
+import { TechnicalArsenalAndEducation } from "@/components/technical-arsenal-and-education";
 
 export default function Portfolio() {
   return (
@@ -485,7 +485,6 @@ export default function Portfolio() {
           <GithubActivity />
         </div>
 
-        {/* Next divider */}
         <div className="h-px w-full bg-border" />
 
         {/* SYSTEM ARCHITECTURE & PROJECTS */}
@@ -681,7 +680,12 @@ export default function Portfolio() {
           </div>
         </section>
 
-        <div className="h-px w-full bg-border mt-8" />
+        <div className="h-px w-full bg-border" />
+
+        {/* SKILLS & EDUCATION SECTION */}
+        <TechnicalArsenalAndEducation />
+
+        <div className="h-px w-full bg-border" />
 
         {/* DEVELOPER ENVIRONMENT */}
         <DeveloperEnvironment />
