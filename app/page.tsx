@@ -8,7 +8,12 @@ import { GithubActivity } from "@/components/github-activity";
 import { NowStatus } from "@/components/now-status";
 import DeveloperEnvironment from "@/components/developer-environment";
 import Image from "next/image";
-import { ExternalLink } from "lucide-react";
+import {
+  ExternalLink,
+  GitPullRequest,
+  GitMerge,
+  GitPullRequestClosed,
+} from "lucide-react";
 
 export default function Portfolio() {
   return (
@@ -250,84 +255,227 @@ export default function Portfolio() {
 
         <div className="h-px w-full bg-border" />
 
-        {/* OPEN SOURCE ENGINEERING */}
-        <section className="flex flex-col gap-8 animate-in fade-in slide-in-from-bottom-4 duration-700 ease-in-out delay-150 fill-mode-both">
-          <h3 className="text-2xl font-semibold tracking-tight text-foreground">
-            Open Source Engineering
-          </h3>
+        {/* OPEN SOURCE & PRODUCTION CODE */}
+        <section className="flex flex-col gap-8 animate-in fade-in slide-in-from-bottom-4 duration-700 ease-in-out delay-700 fill-mode-both mt-16">
+          {/* Header */}
+          <div className="flex flex-col gap-4">
+            <h3 className="text-2xl font-semibold tracking-tight text-foreground">
+              Production Code & Open Source
+            </h3>
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-2xl">
+              I thrive in massive, undocumented codebases. From implementing
+              parallel algorithms in C++ standard libraries to shipping
+              enterprise features for platforms used by 200k+ teams.
+            </p>
+          </div>
 
-          {/* 1. Added 'group/list' to the parent container */}
-          <div className="flex flex-col gap-12 group/list">
-            {/* CERN-HSF (HPX) */}
-            {/* 2. Added the transition and hover state classes to the child */}
-            <div className="flex flex-col gap-4 group transition-all duration-300 hover:!opacity-100 group-hover/list:opacity-25">
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                <div className="flex flex-col">
-                  <h4 className="text-lg font-medium text-foreground">
-                    CERN-HSF (HPX)
-                  </h4>
-                  <span className="text-sm text-muted-foreground">
-                    C++ Core Contributor
-                  </span>
+          {/* PR Tracker List */}
+          <div className="flex flex-col gap-3 mt-2">
+            {/* TICKET 1: HPX (The Low-Latency Flex) */}
+            <div className="group relative flex flex-col gap-3 border border-[#222] bg-[#0a0a0a] rounded-lg p-5 transition-all hover:border-[#444] hover:bg-[#0f0f0f]">
+              <div className="flex items-center justify-between gap-4">
+                <div className="flex items-center gap-2 text-muted-foreground font-mono text-xs sm:text-sm">
+                  <GitMerge className="w-4 h-4 text-[#8957e5]" />{" "}
+                  {/* GitHub Purple */}
+                  <span>STEllAR-GROUP/hpx</span>
                 </div>
-                <Badge
-                  variant="secondary"
-                  className="w-fit transition-colors group-hover:bg-primary group-hover:text-primary-foreground"
-                >
-                  C++ • Parallelism
-                </Badge>
+                <div className="px-2 py-0.5 rounded text-[10px] font-mono uppercase tracking-wider bg-[#8957e5]/10 text-[#8957e5] border border-[#8957e5]/20">
+                  Merged
+                </div>
               </div>
-              <ul className="list-disc list-outside ml-4 space-y-2 text-sm sm:text-base text-muted-foreground leading-relaxed">
-                <li>
-                  Successfully merged architectural improvements into HPX, the
-                  C++ Standard Library for Concurrency and Parallelism.
-                </li>
-                <li>
-                  Navigated a highly complex, globally distributed codebase to
-                  optimize parallel execution components.
-                </li>
-                <li>
-                  Demonstrated the ability to write robust, low-level C++ for
-                  high-performance computing environments.
-                </li>
-              </ul>
+              <div>
+                <a
+                  href="https://github.com/STEllAR-GROUP/hpx/pull/7110"
+                  target="_blank"
+                  className="text-foreground font-semibold font-sans text-lg hover:underline decoration-[#333] underline-offset-4"
+                >
+                  Implement Segmented version of equal algorithm ↗
+                </a>
+                <p className="text-muted-foreground font-sans text-sm mt-2 leading-relaxed">
+                  Developed the distributed parallel implementation of{" "}
+                  <code className="text-foreground bg-[#222] px-1 rounded">
+                    hpx::equal
+                  </code>
+                  . Handled complex iterator type resolution and parallel
+                  dispatch mechanisms, diagnosing boundary-alignment edge cases
+                  that inspired architectural improvements to the C++ Standard
+                  Library for Concurrency
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-2 mt-1">
+                <span className="px-2 py-1 rounded-md bg-[#111] border border-[#333] text-xs text-muted-foreground font-mono">
+                  C++
+                </span>
+                <span className="px-2 py-1 rounded-md bg-[#111] border border-[#333] text-xs text-muted-foreground font-mono">
+                  Parallelism
+                </span>
+                <span className="px-2 py-1 rounded-md bg-[#111] border border-[#333] text-xs text-muted-foreground font-mono">
+                  HPC
+                </span>
+              </div>
             </div>
 
-            {/* Cal.com */}
-            {/* 2. Added the same transition and hover state classes to this child */}
-            <div className="flex flex-col gap-4 group transition-all duration-300 hover:!opacity-100 group-hover/list:opacity-25">
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                <div className="flex flex-col">
-                  <h4 className="text-lg font-medium text-foreground">
-                    Cal.com
-                  </h4>
-                  <span className="text-sm text-muted-foreground">
-                    Production Contributor
+            {/* TICKET 2: Cal.com (The Full-Stack Flex) */}
+            <div className="group relative flex flex-col gap-3 border border-[#222] bg-[#0a0a0a] rounded-lg p-5 transition-all hover:border-[#444] hover:bg-[#0f0f0f]">
+              <div className="flex items-center justify-between gap-4">
+                <div className="flex items-center gap-2 text-muted-foreground font-mono text-xs sm:text-sm">
+                  <GitMerge className="w-4 h-4 text-[#8957e5]" />
+                  <span>calcom/cal.com</span>
+                </div>
+                <div className="px-2 py-0.5 rounded text-[10px] font-mono tracking-wider bg-[#8957e5]/10 text-[#8957e5] border border-[#8957e5]/20">
+                  3 PRs MERGED
+                </div>
+              </div>
+              <div>
+                <span className="text-foreground font-semibold font-sans text-lg">
+                  Core Infrastructure & Production Features
+                </span>
+                <p className="text-muted-foreground font-sans text-sm mt-2 leading-relaxed mb-3">
+                  Shipped production features for a high-scale scheduling
+                  platform used by 200k+ teams, collaborating directly with core
+                  maintainers
+                </p>
+                <ul className="flex flex-col gap-2 font-sans text-sm text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#555] mt-0.5">↳</span>
+                    <span>
+                      <a
+                        href="https://github.com/calcom/cal.com/pull/25638"
+                        target="_blank"
+                        className="text-foreground hover:underline"
+                      >
+                        PR #25638:
+                      </a>{" "}
+                      Implemented SPA-safe History API listeners; reduced
+                      duplicate tracking signals by 80% via Zod schema
+                      validation
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#555] mt-0.5">↳</span>
+                    <span>
+                      <a
+                        href="https://github.com/calcom/cal.com/pull/25499"
+                        target="_blank"
+                        className="text-foreground hover:underline"
+                      >
+                        PR #25499:
+                      </a>{" "}
+                      Refactored fragile slug logic with URI encoding to resolve
+                      critical routing failures for enterprise clients
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#555] mt-0.5">↳</span>
+                    <span>
+                      <a
+                        href="https://github.com/calcom/cal.com/pull/24849"
+                        target="_blank"
+                        className="text-foreground hover:underline"
+                      >
+                        PR #24849:
+                      </a>{" "}
+                      Diagnosed and patched Docker Compose networking errors,
+                      restoring cross-platform build consistency
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              <div className="flex flex-wrap gap-2 mt-1">
+                <span className="px-2 py-1 rounded-md bg-[#111] border border-[#333] text-xs text-muted-foreground font-mono">
+                  Next.js
+                </span>
+                <span className="px-2 py-1 rounded-md bg-[#111] border border-[#333] text-xs text-muted-foreground font-mono">
+                  TypeScript
+                </span>
+                <span className="px-2 py-1 rounded-md bg-[#111] border border-[#333] text-xs text-muted-foreground font-mono">
+                  Docker
+                </span>
+              </div>
+            </div>
+
+            {/* TICKET 3 & 4 Grid: Gemini & Rocket.Chat */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              {/* Gemini CLI */}
+              <div className="group relative flex flex-col gap-3 border border-[#222] bg-[#0a0a0a] rounded-lg p-5 transition-all hover:border-[#444] hover:bg-[#0f0f0f]">
+                <div className="flex items-center justify-between gap-4">
+                  <div className="flex items-center gap-2 text-muted-foreground font-mono text-xs sm:text-sm">
+                    <GitPullRequestClosed className="w-4 h-4 text-[#89929b]" />{" "}
+                    {/* GitHub Gray */}
+                    <span>google-gemini/gemini-cli</span>
+                  </div>
+                </div>
+                <div>
+                  <a
+                    href="https://github.com/google-gemini/gemini-cli/pull/21426"
+                    target="_blank"
+                    className="text-foreground font-semibold font-sans text-md hover:underline decoration-[#333] underline-offset-4"
+                  >
+                    Automated Update Command ↗
+                  </a>
+                  <p className="text-muted-foreground font-sans text-sm mt-2 leading-relaxed">
+                    Implemented an update subcommand with automatic package
+                    manager detection (npm, brew, yarn) and secure,
+                    platform-aware error handling.{" "}
+                    <span className="italic opacity-80">
+                      (Feature complete; automatically closed by repo triage
+                      policy)
+                    </span>
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-2 mt-1">
+                  <span className="px-2 py-1 rounded-md bg-[#111] border border-[#333] text-xs text-muted-foreground font-mono">
+                    CLI
+                  </span>
+                  <span className="px-2 py-1 rounded-md bg-[#111] border border-[#333] text-xs text-muted-foreground font-mono">
+                    TypeScript
+                  </span>
+                  <span className="px-2 py-1 rounded-md bg-[#111] border border-[#333] text-xs text-muted-foreground font-mono">
+                    Node.js
                   </span>
                 </div>
-                <Badge
-                  variant="secondary"
-                  className="w-fit transition-colors group-hover:bg-primary group-hover:text-primary-foreground"
-                >
-                  Next.js • TypeScript
-                </Badge>
               </div>
-              <ul className="list-disc list-outside ml-4 space-y-2 text-sm sm:text-base text-muted-foreground leading-relaxed">
-                <li>
-                  Shipped production-ready features and bug fixes for a modular
-                  scheduling platform used by thousands of teams.
-                </li>
-                <li>
-                  Collaborated asynchronously with core maintainers to ensure
-                  strict backward compatibility, comprehensive test coverage,
-                  and adherence to rigorous review standards.
-                </li>
-                <li>
-                  Engineered solutions for complex routing forms, URI encoding
-                  preservation, and configurable Meta standard conversion
-                  events.
-                </li>
-              </ul>
+
+              {/* Rocket.Chat */}
+              <div className="group relative flex flex-col gap-3 border border-[#222] bg-[#0a0a0a] rounded-lg p-5 transition-all hover:border-[#444] hover:bg-[#0f0f0f]">
+                <div className="flex items-center justify-between gap-4">
+                  <div className="flex items-center gap-2 text-muted-foreground font-mono text-xs sm:text-sm">
+                    <GitPullRequest className="w-4 h-4 text-[#238636]" />{" "}
+                    {/* GitHub Green */}
+                    <span>RocketChat/Rocket.Chat</span>
+                  </div>
+                  <div className="px-2 py-0.5 rounded text-[10px] font-mono uppercase tracking-wider bg-[#238636]/10 text-[#238636] border border-[#238636]/20">
+                    Open
+                  </div>
+                </div>
+                <div>
+                  <a
+                    href="https://github.com/RocketChat/Rocket.Chat/pull/38578"
+                    target="_blank"
+                    className="text-foreground font-semibold font-sans text-md hover:underline decoration-[#333] underline-offset-4"
+                  >
+                    Strict Token Compliance ↗
+                  </a>
+                  <p className="text-muted-foreground font-sans text-sm mt-2 leading-relaxed">
+                    Resolved a UI rendering bug and console error by enforcing
+                    strict design token compliance within the enterprise
+                    Fuselage component library, eliminating invalid state
+                    warnings
+                  </p>
+                </div>
+
+                <div className="flex flex-wrap gap-2 mt-1">
+                  <span className="px-2 py-1 rounded-md bg-[#111] border border-[#333] text-xs text-muted-foreground font-mono">
+                    React
+                  </span>
+                  <span className="px-2 py-1 rounded-md bg-[#111] border border-[#333] text-xs text-muted-foreground font-mono">
+                    TypeScript
+                  </span>
+                  <span className="px-2 py-1 rounded-md bg-[#111] border border-[#333] text-xs text-muted-foreground font-mono">
+                    Design Systems
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </section>
