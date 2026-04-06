@@ -22,7 +22,7 @@ export default function Portfolio() {
         {/* HERO SECTION */}
         <section className="flex flex-col gap-6 animate-in fade-in slide-in-from-bottom-4 duration-700 ease-in-out">
           {/* Image  */}
-          <div className="mx-auto bg-transparent">
+          {/* <div className="mx-auto bg-transparent">
             <Image
               src="/me.png"
               alt="Abir Roy"
@@ -32,7 +32,7 @@ export default function Portfolio() {
               height={220}
               quality={100}
             />
-          </div>
+          </div> */}
 
           <div className="flex flex-col gap-2 items-center">
             <h1 className="text-4xl sm:text-7xl font-medium tracking-tight text-foreground text-center">
