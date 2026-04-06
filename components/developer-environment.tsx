@@ -57,7 +57,7 @@ const DeveloperEnvironment = () => {
               src={images[0].src}
               alt={images[0].alt}
               fill
-              className="object-cover grayscale transition-all duration-700 ease-in-out group-hover:grayscale-0 group-hover:scale-[1.02]"
+              className="object-cover grayscale transition-all duration-700 ease-in-out group-active:grayscale-0 group-hover:grayscale-0 group-hover:scale-[1.02]"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
             <div className="absolute inset-0 ring-1 ring-inset ring-foreground/10 pointer-events-none rounded-lg" />
@@ -72,7 +72,7 @@ const DeveloperEnvironment = () => {
               src={images[1].src}
               alt={images[1].alt}
               fill
-              className="object-cover grayscale transition-all duration-700 ease-in-out group-hover:grayscale-0 group-hover:scale-[1.02]"
+              className="object-cover grayscale transition-all duration-700 ease-in-out group-active:grayscale-0 group-hover:grayscale-0 group-hover:scale-[1.02]"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
             <div className="absolute inset-0 ring-1 ring-inset ring-foreground/10 pointer-events-none rounded-lg" />

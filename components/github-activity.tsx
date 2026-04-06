@@ -23,6 +23,9 @@ export function GithubActivity() {
       className="flex flex-col gap-4 group w-full"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onTouchStart={() => setIsHovered(true)}
+      onTouchEnd={() => setIsHovered(false)}
+      onTouchCancel={() => setIsHovered(false)}
     >
       <div className="flex justify-between px-5 text-xs text-muted-foreground">
         <span className="font-semibold">GITHUB CONTRIBUTIONS</span>
