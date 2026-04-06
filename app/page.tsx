@@ -488,81 +488,195 @@ export default function Portfolio() {
         {/* Next divider */}
         <div className="h-px w-full bg-border" />
 
-        {/* SYSTEMS & ALGORITHMS */}
-        <section className="flex flex-col gap-8 animate-in fade-in slide-in-from-bottom-4 duration-700 ease-in-out delay-300 fill-mode-both">
-          <h3 className="text-2xl font-semibold tracking-tight text-foreground">
-            Systems & Algorithms
-          </h3>
+        {/* SYSTEM ARCHITECTURE & PROJECTS */}
+        <section className="flex flex-col gap-8 animate-in fade-in slide-in-from-bottom-4 duration-700 ease-in-out delay-700 fill-mode-both mt-16 mb-24">
+          {/* Header */}
+          <div className="flex flex-col gap-4">
+            <h3 className="text-2xl font-semibold tracking-tight text-foreground">
+              Architecture & Systems
+            </h3>
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-2xl">
+              I build infrastructure, not just interfaces. While my full-stack
+              work handles real-world traffic, my deepest engineering focus is
+              on deterministic performance and hardware-sympathetic C++ design.
+            </p>
+          </div>
 
-          <div className="flex flex-col gap-12">
-            {/* AtomicQueue & Micromatch */}
-            <div className="flex flex-col gap-4 group">
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                <div className="flex flex-col">
-                  <h4 className="text-lg font-medium text-foreground">
-                    AtomicQueue & Micromatch
-                  </h4>
-                  <span className="text-sm text-muted-foreground">
-                    Low-Latency C++ Engineering
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+            {/* PROJECT 1: Micromatch (Takes full width on mobile, 1 column on desktop) */}
+            <div className="md:col-span-2 group flex flex-col justify-between border border-[#222] bg-[#0a0a0a] rounded-lg p-6 sm:p-8 transition-all hover:border-[#444] hover:bg-[#0f0f0f] relative overflow-hidden">
+              {/* Decorative background grid */}
+              <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
+
+              <div className="relative z-10">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+                  <div>
+                    <h4 className="text-xl font-bold text-foreground font-sans tracking-tight">
+                      Micromatch
+                    </h4>
+                    <p className="text-muted-foreground font-mono text-sm mt-1">
+                      High-Performance Limit Order Book
+                    </p>
+                  </div>
+                  <a
+                    href="https://github.com/roy-abir05/Micromatch"
+                    target="_blank"
+                    className="flex items-center gap-2 px-3 py-1.5 rounded-md bg-[#111] border border-[#333] hover:bg-[#222] transition-colors text-sm font-medium text-foreground"
+                  >
+                    <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current">
+                      <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.113.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    Source Code
+                  </a>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+                  <div className="flex flex-col border-l-2 border-[#333] pl-4">
+                    <span className="text-muted-foreground text-xs uppercase tracking-wider font-mono">
+                      Latency
+                    </span>
+                    <span className="text-foreground font-semibold font-mono text-lg">
+                      &lt; 100 ns
+                    </span>
+                  </div>
+                  <div className="flex flex-col border-l-2 border-[#333] pl-4">
+                    <span className="text-muted-foreground text-xs uppercase tracking-wider font-mono">
+                      Throughput
+                    </span>
+                    <span className="text-foreground font-semibold font-mono text-lg">
+                      12.3M orders/s
+                    </span>
+                  </div>
+                  <div className="flex flex-col border-l-2 border-[#333] pl-4">
+                    <span className="text-muted-foreground text-xs uppercase tracking-wider font-mono">
+                      Cancellation
+                    </span>
+                    <span className="text-foreground font-semibold font-mono text-lg">
+                      O(1) Time
+                    </span>
+                  </div>
+                </div>
+
+                <ul className="flex flex-col gap-2 font-sans text-sm text-muted-foreground leading-relaxed">
+                  <li className="flex items-start gap-2">
+                    <span className="text-foreground mt-0.5">•</span>
+                    <span>
+                      Designed a linear memory arena to pre-allocate order
+                      objects, eliminating runtime heap allocations (
+                      <code className="text-foreground bg-[#222] px-1 py-0.5 rounded text-[10px]">
+                        new/delete
+                      </code>
+                      ) on the hot path.
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-foreground mt-0.5">•</span>
+                    <span>
+                      Developed a TCP/IP Gateway using POSIX sockets to ingest
+                      binary packets, simulating exchange-grade connectivity.
+                    </span>
+                  </li>
+                </ul>
+
+                <div className="flex flex-wrap gap-2 mt-6">
+                  <span className="px-2 py-1 rounded bg-[#111] border border-[#333] text-[10px] text-muted-foreground font-mono">
+                    C++17
+                  </span>
+                  <span className="px-2 py-1 rounded bg-[#111] border border-[#333] text-[10px] text-muted-foreground font-mono">
+                    POSIX Sockets
+                  </span>
+                  <span className="px-2 py-1 rounded bg-[#111] border border-[#333] text-[10px] text-muted-foreground font-mono">
+                    System Design
                   </span>
                 </div>
-                <Badge
-                  variant="secondary"
-                  className="w-fit transition-colors group-hover:bg-primary group-hover:text-primary-foreground"
-                >
-                  C++ • CMake
-                </Badge>
               </div>
-              <ul className="list-disc list-outside ml-4 space-y-2 text-sm sm:text-base text-muted-foreground leading-relaxed">
-                <li>
-                  Designed and implemented a lock-free ring buffer and Limit
-                  Order Book engine tailored for high-frequency trading
-                  environments.
-                </li>
-                <li>
-                  Engineered custom memory management and synchronization
-                  primitives to eliminate thread blocking and reduce latency.
-                </li>
-                <li>
-                  Focused heavily on cache-line optimization and mechanical
-                  sympathy to maximize algorithmic throughput.
-                </li>
-              </ul>
             </div>
 
-            {/* Competitive Programming */}
-            <div className="flex flex-col gap-4 group">
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                <div className="flex flex-col">
-                  <h4 className="text-lg font-medium text-foreground">
-                    Algorithmic Problem Solving
-                  </h4>
-                  <span className="text-sm text-muted-foreground">
-                    Competitive Programming
+            {/* PROJECT 2: AtomicQueue */}
+            <div className="group flex flex-col justify-between border border-[#222] bg-[#0a0a0a] rounded-lg p-6 transition-all hover:border-[#444] hover:bg-[#0f0f0f]">
+              <div>
+                <h4 className="text-lg font-bold text-foreground font-sans tracking-tight mb-1">
+                  AtomicQueue
+                </h4>
+                <p className="text-muted-foreground font-mono text-xs mb-4">
+                  Wait-Free SPSC Ring Buffer
+                </p>
+
+                <p className="font-sans text-sm text-muted-foreground leading-relaxed mb-4">
+                  Engineered a C++17 lock-free queue for high-frequency thread
+                  communication. Eliminated false sharing cache-misses by
+                  enforcing strict{" "}
+                  <code className="text-foreground bg-[#222] px-1 py-0.5 rounded text-[10px]">
+                    alignas(64)
+                  </code>{" "}
+                  byte alignment on head and tail pointers.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mt-4">
+                <div className="flex gap-2">
+                  <span className="px-2 py-1 rounded bg-[#111] border border-[#333] text-[10px] text-muted-foreground font-mono">
+                    C++17
+                  </span>
+                  <span className="px-2 py-1 rounded bg-[#111] border border-[#333] text-[10px] text-muted-foreground font-mono">
+                    Atomics
                   </span>
                 </div>
-                <Badge
-                  variant="secondary"
-                  className="w-fit transition-colors group-hover:bg-primary group-hover:text-primary-foreground"
+                <a
+                  href="https://github.com/roy-abir05/AtomicQueue"
+                  target="_blank"
+                  className="text-foreground hover:underline decoration-[#333] underline-offset-4 text-sm font-medium"
                 >
-                  C++ • Data Structures
-                </Badge>
+                  View Repo ↗
+                </a>
               </div>
-              <ul className="list-disc list-outside ml-4 space-y-2 text-sm sm:text-base text-muted-foreground leading-relaxed">
-                <li>
-                  Indian National Olympiad in Informatics (INOI) Bronze
-                  Medalist.
-                </li>
-                <li>
-                  Regionalist at the IICPC CodeFest 2025, demonstrating the
-                  ability to write highly optimized logic under extreme time
-                  constraints.
-                </li>
-                <li>
-                  Consistently leverage advanced data structures and algorithms
-                  to solve complex mathematical and computational problems.
-                </li>
-              </ul>
+            </div>
+
+            {/* PROJECT 3: Aarohan & Web */}
+            <div className="group flex flex-col justify-between border border-[#222] bg-[#0a0a0a] rounded-lg p-6 transition-all hover:border-[#444] hover:bg-[#0f0f0f]">
+              <div>
+                <h4 className="text-lg font-bold text-foreground font-sans tracking-tight mb-1">
+                  Aarohan Website & InsightSphere
+                </h4>
+                <p className="text-muted-foreground font-mono text-xs mb-4">
+                  Enterprise & Event Web Apps
+                </p>
+
+                <p className="font-sans text-sm text-muted-foreground leading-relaxed mb-4">
+                  Proof of full-stack delivery. Built the official traffic-heavy
+                  portal for NIT Durgapur&apos;s annual tech fest
+                  (Next.js/Tailwind) and engineered a robust RBAC blog platform
+                  featuring optimized PostgreSQL queries via Spring Boot.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mt-4">
+                <div className="flex gap-2">
+                  <span className="px-2 py-1 rounded bg-[#111] border border-[#333] text-muted-foreground text-sm sm:text-[10px] font-mono">
+                    Next.js
+                  </span>
+                  <span className="px-2 py-1 rounded bg-[#111] border border-[#333] text-muted-foreground text-sm sm:text-[9px] font-mono text-nowrap pt-1.5">
+                    Spring Boot
+                  </span>
+                </div>
+                <div className="flex gap-3 sm:gap-2 text-sm sm:text-[9px]">
+                  <a
+                    href="https://github.com/roy-abir05/InsightSphere"
+                    target="_blank"
+                    className="text-foreground hover:underline decoration-[#333] underline-offset-4 font-medium"
+                  >
+                    InsightSphere ↗
+                  </a>
+                  {/* Make sure to replace this href with your actual Aarohan repo link */}
+                  <a
+                    href="https://github.com/Praiseson6065/aarohan-website"
+                    target="_blank"
+                    className="text-foreground hover:underline decoration-[#333] underline-offset-4 font-medium"
+                  >
+                    Aarohan ↗
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
