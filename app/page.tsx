@@ -696,9 +696,15 @@ export default function Portfolio() {
 
           <div className="hidden sm:flex items-center gap-2 font-mono text-xs">
             <span>[ type</span>
-            <kbd className="px-1.5 py-0.5 bg-[#111] border border-[#333] rounded-md text-foreground font-sans text-[10px] uppercase tracking-wider shadow-sm">
-              sudo
-            </kbd>
+            <div className="flex items-center gap-1.5">
+              <kbd className="px-1.5 py-0.5 bg-[#111] border border-[#333] rounded-md text-foreground font-sans text-[10px] uppercase tracking-wider shadow-sm">
+                sudo
+              </kbd>
+              <span className="opacity-50">or</span>
+              <kbd className="px-1.5 py-0.5 bg-[#111] border border-[#442222] rounded-md text-red-400 font-sans text-[10px] uppercase tracking-wider shadow-sm transition-colors hover:bg-[#331111]">
+                ctos
+              </kbd>
+            </div>
             <span>anywhere ]</span>
           </div>
         </footer>
