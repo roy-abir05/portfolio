@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { CommandMenu } from "@/components/command-menu";
 import { ArchTerminal } from "@/components/easter-eggs/arch-terminal";
 import { CtosBlackout } from "@/components/easter-eggs/ctos-blackout";
+import { ConsoleGreeting } from "@/components/easter-eggs/console-greeting";
 import { SocialsDock } from "@/components/socials-dock";
 
 const poppins = Poppins({
@@ -51,6 +52,7 @@ export default function RootLayout({
         <CommandMenu />
         <ArchTerminal />
         <CtosBlackout />
+        <ConsoleGreeting />
       </body>
     </html>
   );
