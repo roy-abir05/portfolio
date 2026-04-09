@@ -6,7 +6,7 @@ import Link from "next/link";
 import { GithubActivity } from "@/components/github-activity";
 import { NowStatus } from "@/components/now-status";
 import DeveloperEnvironment from "@/components/developer-environment";
-import Image from "next/image";
+// import Image from "next/image";
 import {
   ExternalLink,
   GitPullRequest,
@@ -73,12 +73,9 @@ export default function Portfolio() {
                 GitHub
               </Button>
             </Link>
-            <Link
-              href={
-                process.env.NEXT_PUBLIC_RESUME_URL ||
-                "https://drive.google.com/file/d/1NGzczTl1p25wr2c0wMfTFtueV72GXUhk/view?usp=sharing"
-              }
-              target="_blank"
+            <a
+              href="/Abir Roy.pdf"
+              download="Abir Roy.pdf"
             >
               <Button
                 variant="secondary"
@@ -91,7 +88,7 @@ export default function Portfolio() {
               >
                 Resume
               </Button>
-            </Link>
+            </a>
           </div>
 
           <div className="pt-2">
