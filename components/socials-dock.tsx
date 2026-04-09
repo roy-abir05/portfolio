@@ -2,17 +2,26 @@
 
 import { Mail } from "lucide-react";
 import Link from "next/link";
+import posthog from "posthog-js";
 
 const socials = [
   {
     name: "GitHub",
     icon: <Github className="w-5 h-5" />,
     href: "https://github.com/roy-abir05",
+    clickHandler: () =>
+      posthog.capture("github_button_clicked", {
+        location: "dock",
+      }),
   },
   {
     name: "LinkedIn",
     icon: <LinkedIn className="w-5 h-5" />,
     href: "https://linkedin.com/in/roy-abir05",
+    clickHandler: () =>
+      posthog.capture("linkedin_clicked", {
+        location: "dock",
+      }),
   },
   {
     name: "Discord",
@@ -23,6 +32,10 @@ const socials = [
     name: "Email",
     icon: <Mail className="w-5 h-5" />,
     href: "mailto:royabirdhn@gmail.com",
+    clickHandler: () =>
+      posthog.capture("email_clicked", {
+        location: "dock",
+      }),
   },
   {
     name: "Codeforces",
@@ -46,6 +59,7 @@ export function SocialsDock() {
             href={social.href}
             target="_blank"
             className="group relative p-2.5 rounded-full text-muted-foreground hover:text-foreground hover:bg-[#111] transition-all duration-200"
+            onClick={social.clickHandler}
           >
             {social.icon}
 

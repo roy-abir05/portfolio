@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useEasterEgg } from "./use-easter-egg";
+import posthog from "posthog-js";
 
 export function CtosBlackout() {
   const [isBlackoutActive, setIsBlackoutActive] = useState(false);
@@ -9,6 +10,10 @@ export function CtosBlackout() {
 
   useEasterEgg("ctos", () => {
     setIsBlackoutActive(true);
+    posthog.capture("easter_egg_triggered", {
+      type: "ctos",
+      location: "global_listener",
+    });
   });
 
   const exitBlackout = () => {

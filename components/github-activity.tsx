@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { ExternalLink } from "lucide-react";
 import dynamic from "next/dynamic";
+import posthog from "posthog-js";
 
 const GitHubCalendar = dynamic(
   () => import("react-github-calendar").then((mod) => mod.GitHubCalendar),
@@ -34,6 +35,11 @@ export function GithubActivity() {
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          onClick={() =>
+            posthog.capture("github_button_clicked", {
+              location: "github_activity",
+            })
+          }
         >
           @roy-abir05
           <ExternalLink className="h-3.5 w-3.5" />

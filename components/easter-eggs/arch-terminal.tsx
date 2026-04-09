@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect, ReactNode } from "react";
 import { useEasterEgg } from "./use-easter-egg";
+import posthog from "posthog-js";
 
 const NeofetchOutput = () => (
   <div className="flex flex-col sm:flex-row gap-6 sm:gap-12 text-foreground mb-6">
@@ -74,6 +75,10 @@ export function ArchTerminal() {
         document.body.classList.add("overflow-hidden", "max-h-full");
       }
       return !prev;
+    });
+    posthog.capture("easter_egg_triggered", {
+      type: "ctos",
+      location: "global_listener",
     });
   });
 
