@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   title: "Abir Roy",
 
   description:
-    "Undergraduate at NIT Durgapur specializing in C++, low-latency systems, and full-stack web infrastructure.",
+    "Systems & Full-Stack Engineer from NIT Durgapur. Specializing in high-performance C++ architecture, scalable web infrastructure, and competitive programming",
 
   keywords: [
     "C++",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     siteName: "Abir Roy Portfolio",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og.jpg",
         width: 1200,
         height: 630,
         alt: "Abir Roy - Systems & Full-Stack Engineer",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     title: "Abir Roy | Systems & Full-Stack Engineer",
     description:
       "Systems architecture, low-latency C++, and scalable web infrastructure.",
-    images: ["/og-image.jpg"],
+    images: ["/og.jpg"],
   },
 
   icons: {
