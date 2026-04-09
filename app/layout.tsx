@@ -23,7 +23,46 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: "Abir Roy",
-  description: "Systems & Software Engineer",
+
+  description:
+    "Undergraduate at NIT Durgapur specializing in C++, low-latency systems, and full-stack web infrastructure.",
+
+  keywords: [
+    "C++",
+    "High-Frequency Trading",
+    "Full-Stack",
+    "React",
+    "Next.js",
+    "Arch Linux",
+    "Systems Engineering",
+  ],
+
+  openGraph: {
+    title: "Abir Roy | Systems & Full-Stack Engineer",
+    description:
+      "Systems architecture, low-latency C++, and scalable web infrastructure.",
+    url: "https://roy-abir05.vercel.app/",
+    siteName: "Abir Roy Portfolio",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Abir Roy - Systems & Full-Stack Engineer",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Abir Roy | Systems & Full-Stack Engineer",
+    description:
+      "Systems architecture, low-latency C++, and scalable web infrastructure.",
+    images: ["/og-image.jpg"],
+  },
+
   icons: {
     icon: "/icon.jpeg",
   },
