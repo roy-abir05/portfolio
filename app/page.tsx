@@ -73,10 +73,7 @@ export default function Portfolio() {
                 GitHub
               </Button>
             </Link>
-            <a
-              href="/Abir Roy.pdf"
-              download="Abir Roy.pdf"
-            >
+            <a href="/Abir Roy.pdf" download="Abir Roy.pdf">
               <Button
                 variant="secondary"
                 className="h-10 px-6 font-medium"
@@ -397,8 +394,8 @@ export default function Portfolio() {
               <div className="group relative flex flex-col gap-3 border border-[#222] bg-[#0a0a0a] rounded-lg p-5 transition-all hover:border-[#444] hover:bg-[#0f0f0f]">
                 <div className="flex items-center justify-between gap-4">
                   <div className="flex items-center gap-2 text-muted-foreground font-mono text-xs sm:text-sm">
-                    <GitPullRequestClosed className="w-4 h-4 text-[#89929b]" />{" "}
-                    {/* GitHub Gray */}
+                    <GitPullRequest className="w-4 h-4 text-[#3fb950]" />{" "}
+                    {/* GitHub Open Green */}
                     <span>google-gemini/gemini-cli</span>
                   </div>
                 </div>
@@ -414,9 +411,8 @@ export default function Portfolio() {
                     Implemented an update subcommand with automatic package
                     manager detection (npm, brew, yarn) and secure,
                     platform-aware error handling.{" "}
-                    <span className="italic opacity-80">
-                      (Feature complete; automatically closed by repo triage
-                      policy)
+                    <span className="italic opacity-80 text-[#3fb950]/80">
+                      (Reopened and under active maintainer review)
                     </span>
                   </p>
                 </div>
